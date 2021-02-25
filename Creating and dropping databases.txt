@@ -2,3 +2,6 @@ Create database BaseExemplo
 
 --Alterando o nome do banco
 Alter Database BaseExemplo modify Name = "BaseExemplo_Renomeada"
+
+--Alterando o nome do banco via stored procedure
+Execute sp_renameDB 'NomeBaseAntiga', 'NomeBaseNova'

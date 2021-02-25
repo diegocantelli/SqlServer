@@ -1,1 +1,4 @@
 Create database BaseExemplo
+
+--Alterando o nome do banco
+Alter Database BaseExemplo modify Name = "BaseExemplo_Renomeada"

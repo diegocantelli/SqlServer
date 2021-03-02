@@ -5,3 +5,8 @@ default 3 for genderId
 --Dropando uma constraint
 alter table tblPerson
 add constraint DF_tblPerson_GenderId
+
+--Adicionando uma check constraint
+alter table tblPerson
+add constraint ck_person_age
+check (age > 0 and age < 120)

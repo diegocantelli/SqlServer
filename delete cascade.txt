@@ -1,0 +1,7 @@
+alter table tblPerson
+add constraint [FK_genderId]
+foreign key ([GenderId])
+references tblGender (GenderId)
+on update cascade
+on delete cascade
+go

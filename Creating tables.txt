@@ -1,0 +1,12 @@
+-- comando usado para mudar a base de dados
+use [Sample]
+go
+
+create table tblGender
+(
+	-- definindo Id como chave primária da tabela e que não aceita nulos
+	Id int not null primary key,
+
+	--definindo Gender como do tipo nvarchar de tamanho 50
+	Gender nvarchar(50) not null
+)

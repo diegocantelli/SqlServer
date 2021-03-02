@@ -1,3 +1,7 @@
 alter table tblPerson
 add constraint df_tblPerson_GenderId
 default 3 for genderId
+
+--Dropando uma constraint
+alter table tblPerson
+add constraint DF_tblPerson_GenderId

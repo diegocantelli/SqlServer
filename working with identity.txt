@@ -4,3 +4,10 @@ create table tblPerson
 	PersonId identity(1,1) primary key,
 	Name nvarchar(20)
 )
+
+
+SET Identity_insert nomeTabela ON -> permite que seja informad o valor do id da tabela
+também não poderá ser omitido os nomes das colunas na hora de fazer o insert
+
+Set Identity_insert nomeTabela OFF -> retorna para o estado original da tabela, permitindo
+omitir o valor da chave da tabela na hora de fazer o insert

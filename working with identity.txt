@@ -15,3 +15,14 @@ omitir o valor da chave da tabela na hora de fazer o insert
 
 Reiniciando o valor do indentiry para a coluna em caso de exclusão de todos os registros
 DBCC CHECKIDENTITY(tblPerson, RESSED, 0)
+
+
+Scope_Identity() -> Retorna o último id inserido dentro da mesma sessão e escopo
+onde está sendo executado
+
+@@Identity -> Retorna o último id inserido dentro da mesma sessão e não leva em consideração
+o escopo onde está sendo executado. Se dentro de uma trigger for inserido um valor, ele irá retorna
+o último valor dessa tabela
+
+SELECT Ident-Current('TableName') -> Retorna o último ID inserido independente da sessão
+e do escopo onde foi executada

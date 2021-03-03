@@ -11,3 +11,7 @@ também não poderá ser omitido os nomes das colunas na hora de fazer o insert
 
 Set Identity_insert nomeTabela OFF -> retorna para o estado original da tabela, permitindo
 omitir o valor da chave da tabela na hora de fazer o insert
+
+
+Reiniciando o valor do indentiry para a coluna em caso de exclusão de todos os registros
+DBCC CHECKIDENTITY(tblPerson, RESSED, 0)

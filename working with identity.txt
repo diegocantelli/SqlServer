@@ -1,0 +1,6 @@
+create table tblPerson
+(
+	--Identity(1,1) -> indica que começará de 1 e será incrementado em 1 a cada novo registro
+	PersonId identity(1,1) primary key,
+	Name nvarchar(20)
+)

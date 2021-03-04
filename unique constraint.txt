@@ -1,0 +1,12 @@
+É utilizada quando se deseja garantir que mais de uma coluna na tabela não se repita, além da chave primária.
+
+Chaves primárias -> Nã permitem nulos
+Unique Key -> Permitem nulos
+
+--Adicionando uma Unique Constraint via SQL
+Alter table tblPerson
+Add Constraint UQ_tblPerson_Email Unique(Email)
+
+--Dropando uma Unique Constraint
+Alter Table tblPerson
+Drop Constraint UQ_tblPerson_Email

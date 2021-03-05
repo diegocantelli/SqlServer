@@ -1,0 +1,4 @@
+FULL JOIN -> é a junção do left join com right join
+
+CROSS JOIN -> seu resultado será o produto cartesiano entre as tabelas envolvidas, 
+	      não deve ter a cláusula ON definida

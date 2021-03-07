@@ -42,6 +42,11 @@ Begin
 	where Gender = @Gender
 End  
 
+--Executando uma procedure com output parâmetro
+Declare @TotalCount int
+Execute spGetEmployeeCountByGender 'Male', @TotalCount output
+print @TotalCount 
+
 
 
 

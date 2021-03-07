@@ -47,6 +47,9 @@ Declare @TotalCount int
 Execute spGetEmployeeCountByGender 'Male', @TotalCount output
 print @TotalCount 
 
+--Exibindo as dependências de uma stored procedure
+sp_depends spGetEmployeeCountByGender 
+
 
 
 

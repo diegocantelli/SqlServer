@@ -32,6 +32,16 @@ sp_helptext nomeProcedure
 --Deletando uma procedure
 Drop proc nomeProcedure
 
+--Criando uma procedure com output parametro
+Create procedure spGetEmployeeCountByGender
+@Gender nvarchar(10),
+@EmployeeCount  int output
+as
+Begin
+	select @EmployeeCount = count(id) from tabela
+	where Gender = @Gender
+End  
+
 
 
 

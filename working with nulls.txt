@@ -3,8 +3,9 @@ ISNULL -> O primeiro parâmetro é valor que será checdo se é NULO. O segundo 
 
 	EX: select ISNULL(NULL, 'Valor NULO')
 
-COALESCE ->
+COALESCE -> Retorna o primeiro valor não nulo
 	EX: select COALESCE(NULL, 'Valor NULO')
+	EX2: select COALESCE(Nome, NomeDoMeio, UltimoNome) -> irá retornar apenas o primeiro valor não nulo
 
 CASE WHEN ->
 	EX: select case when nome is null then 'nome não informado' else nome end as nomeCliente

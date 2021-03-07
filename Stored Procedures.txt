@@ -58,6 +58,11 @@ begin
 	return (select count(id) from tabela)
 End
 
+-- Executando uma stored procedure com return
+
+Declare @Total int
+Execute @Total = spGetEmployeeCount
+
 
 
 

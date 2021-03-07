@@ -4,3 +4,8 @@ AS
 BEGIN
 	select * from employees
 END
+
+
+--Executando uma Stored Procedure
+1 - spGetEmployees
+2 - Exec spGetEmployees

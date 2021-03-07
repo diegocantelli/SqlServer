@@ -1,0 +1,10 @@
+ISNULL -> O primeiro parâmetro é valor que será checdo se é NULO. O segundo parâmetro é o valor que será
+         substituído no caso do primeiro parâmetro ser NULO.
+
+	EX: select ISNULL(NULL, 'Valor NULO')
+
+COALESCE ->
+	EX: select COALESCE(NULL, 'Valor NULO')
+
+CASE WHEN ->
+	EX: select case when nome is null then 'nome não informado' else nome end as nomeCliente

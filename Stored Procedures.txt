@@ -9,3 +9,15 @@ END
 --Executando uma Stored Procedure
 1 - spGetEmployees
 2 - Exec spGetEmployees
+
+
+--Criando Stored Procedures com parâmetros
+Create Proc spGetEmployeesByGenderAndDepartment
+@Gender nvarchar(20)
+@Department int
+AS
+BEGIN
+	select * from employees
+	where Gender = @Gender
+	And Department = @Department
+END

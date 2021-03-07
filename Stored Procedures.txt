@@ -1,0 +1,6 @@
+--Estrutura básica de criação de uma stored procedure
+CREATE PROCEDURE spGetEmployees
+AS
+BEGIN
+	select * from employees
+END

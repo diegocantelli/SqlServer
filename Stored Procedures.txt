@@ -21,3 +21,6 @@ BEGIN
 	where Gender = @Gender
 	And Department = @Department
 END
+
+--Executando Stored Procedures com parâmetros
+spGetEmployeesByGenderAndDepartment 'M', 1

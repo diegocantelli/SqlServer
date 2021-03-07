@@ -27,8 +27,10 @@ spGetEmployeesByGenderAndDepartment 'M', 1
 
 
 --Obtendo a implementação de um Stored Procedure
-
 sp_helptext nomeProcedure
+
+--Deletando uma procedure
+Drop proc nomeProcedure
 
 
 

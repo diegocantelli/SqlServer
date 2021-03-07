@@ -24,3 +24,30 @@ END
 
 --Executando Stored Procedures com parâmetros
 spGetEmployeesByGenderAndDepartment 'M', 1
+
+
+--Obtendo a implementação de um Stored Procedure
+
+sp_helptext nomeProcedure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

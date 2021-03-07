@@ -51,6 +51,14 @@ print @TotalCount
 sp_depends spGetEmployeeCountByGender 
 
 
+--Usando return no lugar de Output para retornar valores em uma stored procedure
+Create procedure spGetEmployeeCount
+as 
+begin
+	return (select count(id) from tabela)
+End
+
+
 
 
 

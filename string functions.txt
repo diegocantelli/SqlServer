@@ -8,3 +8,10 @@ select replicate('string', 3)
 --SPACE
 -- argumento -> indica a qtd de espaços em branco que serão inseridos
 select space(5)
+
+
+--PATINDEX
+-- retorna o índice inicial de um determinado padrão de string, caso não seja encontrado, retorna 0
+-- 1 argumento -> deverá ser buscado na Coluna valores que terminem com @email.com
+-- 2 argumento -> informa a coluna do BD no qual o padrão deverá ser buscado
+select PATINDEX('%@email.com', Coluna) from tabela

@@ -15,3 +15,10 @@ select space(5)
 -- 1 argumento -> deverá ser buscado na Coluna valores que terminem com @email.com
 -- 2 argumento -> informa a coluna do BD no qual o padrão deverá ser buscado
 select PATINDEX('%@email.com', Coluna) from tabela
+
+STUFF
+-- insere uma string por uma cadeia de caracteres definidas pelo usuário
+-- 1 argumento -> o campo que deverá ser baseado para aplicar o padrão
+-- 2 argumento -> a partir de qual caracter deverá começar a substituição
+-- 3 argumento -> a cadeia de caracteres que deverá ser usada na substituição
+select STUFF(Email, 2, 3, '*****') from tabela

@@ -1,0 +1,5 @@
+-- REPLICATE
+
+-- 1 argumento -> string que será repetida
+-- 2 argumento -> número de vezes que a string será repetida
+select replicate('string', 3)

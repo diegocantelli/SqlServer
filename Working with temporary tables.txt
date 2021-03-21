@@ -1,0 +1,22 @@
+Tabelas temporárias locais
+
+-- Para criar uma tabela temporária é necessário usar o símbolo '#' antes do nome da tabela.
+-- Esta tabela ficará disponível na base de dados chamada TempDb
+-- A tabela ficará disponível apenas para a conexão que a criou e será automaticamente dropada assim que a conexão
+   for encerrado
+-- Caso seja criada dentro de uma proc, ela estará disponível somente dentro do escopo da proc e será dropada assim
+   que a execução da proc finalizar
+create table #personDetails(id int, nome nvarchar(30), nascimento date)
+
+
+
+Tabelas temporárias globais
+
+-- Para criar uma tabela temporária é necessário usar o símbolo '##' antes do nome da tabela.
+-- Esta tabela ficará disponível na base de dados chamada TempDb
+-- A tabela ficará disponível para todas as conexões que a utilizem e será automaticamente dropada assim que a última conexão
+   que a estiver utilizando for encerrada
+-- Caso seja criada dentro de uma proc, ela estará disponível somente dentro do escopo da proc e será dropada assim
+   que a execução da proc finalizar
+create table #personDetails(id int, nome nvarchar(30), nascimento date)
+ 

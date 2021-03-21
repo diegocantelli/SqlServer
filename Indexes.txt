@@ -19,3 +19,7 @@ Um Clustered índice determina a ordem física dos dados em uma tabela. Por este
 motivo, uma tabela pode ter apenas um índice clusterizado.
 Chaves primárias definem automaticamente um índice clusterizado caso
 não tenha sido definido nenhum anteriormete.
+
+	-- Criando um índice clusterizado
+	CREATE CLUSTERED INDEX IX_tblEmployee_Gender_Salary
+	ON tblEmployee(Gender DESC, Salary ASC)

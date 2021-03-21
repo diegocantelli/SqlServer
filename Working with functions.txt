@@ -4,3 +4,9 @@ AS
 BEGIN
 	RETURN @Parametro
 END
+
+-- Usando SCHEMABINDING
+
+SchemaBinding é usado para dizermos que a função faz parte do esquema da base de dados, ou seja,
+não será possível excluir uma tabela ou uma view que esteja sendo referenciada por uma função que foi
+declarada com schemabinding. Ajuda a manter a integridade dos objetos do BD.

@@ -6,3 +6,8 @@ que no momento da query seja verificada cada linha da tabela(TABLE SCAN).
 
 CREATE Index IX_tblEmployee_Salary
 ON tblEmployee (SALARY ASC)
+
+
+-- DROPANDO ÍNDICES
+
+DROP INDEX tblEmployee.IX_tblEmployee_Salary

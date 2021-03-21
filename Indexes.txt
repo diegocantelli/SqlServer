@@ -27,3 +27,21 @@ não tenha sido definido nenhum anteriormete.
 	-- Criando um índice clusterizado composto
 	CREATE CLUSTERED INDEX IX_tblEmployee_Gender_Salary
 	ON tblEmployee(Gender DESC)
+
+
+
+-- NON CLUSTERED ÍNDEX
+
+Neste tipo de índice o dado é armazenado em um lugar e o índice é armazenado
+em outro lugar, por este motivo, uma tabela pode ter mais de um índice não clusterizado.
+
+
+
+
+
+
+
+
+
+
+

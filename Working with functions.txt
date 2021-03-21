@@ -1,0 +1,6 @@
+CREATE FUNCTION RetornaValor(@Parametro int)
+RETURNS INT
+AS
+BEGIN
+	RETURN @Parametro
+END

@@ -1,0 +1,9 @@
+-- Esse tipo de função não possui BEGIN e END na sua sintaxe de criação
+
+CREATE FUNCTION fn_RetornaFuncionariosPorGenero(@Genero varchar(20)
+-- O tipo de retorno deve ser TABLE
+RETURNS TABLE
+AS
+	RETURN (Select Id, Nome, Nascimento
+		From Funcionarios
+		Where Genero = @Genero)

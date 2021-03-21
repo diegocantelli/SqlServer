@@ -22,4 +22,8 @@ não tenha sido definido nenhum anteriormete.
 
 	-- Criando um índice clusterizado
 	CREATE CLUSTERED INDEX IX_tblEmployee_Gender_Salary
-	ON tblEmployee(Gender DESC, Salary ASC)
+	ON tblEmployee(Gender DESC)
+
+	-- Criando um índice clusterizado composto
+	CREATE CLUSTERED INDEX IX_tblEmployee_Gender_Salary
+	ON tblEmployee(Gender DESC)

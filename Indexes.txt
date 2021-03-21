@@ -1,0 +1,3 @@
+Índices são usados pelas querys para encontrar dados de forma mais rápida.
+O uso dos índices corretamente pode melhorar drasticamente a performance da query, evitando 
+que no momento da query seja verificada cada linha da tabela(TABLE SCAN).

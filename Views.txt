@@ -1,0 +1,3 @@
+Views
+
+Views podem ser consideradas tabelas virtuais

@@ -8,6 +8,12 @@ Vantagens
 	Um funcionário comum não pode ver os salários de outros empregados, isso pode ser implementado
 	apenas não selecionando a coluna salário dentro da query referente à view.
 
+Limitações
+	Não é possível passar parâmetros para uma view.
+	Rules and Defaults não podem ser associados com views
+	A cláusula ORDER BY são inválidas a menos que as cláusulas TOP ou FOR XML sejam especificadas
+	Views não podem ser baseadas em tabelas temporárias
+
 Criando uma View
 
 	Create View vwBuscaFuncionarios

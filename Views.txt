@@ -1,6 +1,12 @@
 Views
 
-	Views podem ser consideradas tabelas virtuais
+	Views podem ser consideradas tabelas virtuais.
+
+Vantagens
+	Views podem ser usadas para reduzir a complexidade do esquema da base de dados
+	Views podem ser usadas para proteger dados que não devem ser exibidos a todos, como:
+	Um funcionário comum não pode ver os salários de outros empregados, isso pode ser implementado
+	apenas não selecionando a coluna salário dentro da query referente à view.
 
 Criando uma View
 

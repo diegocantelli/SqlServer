@@ -1,0 +1,8 @@
+Ao criar índices em uma View, esta view agora é capaz de armazenar dados, como os dados referentes aos índices.
+
+Para se criar índices em uma view, deve-se seguir os seguintes passos:
+	1 - A view deve ser criada com a opção "WITH SCHEMABINDING"
+	2 - Se uma função agregada estiver presente no SELECT, e se nessa essa função houver a possibilidade
+	    de retornar NULO, o valor NULO deve ser tratado.
+	3 - Se houver a clásula GROUP BY, então na lista do SELECT deve ser conter a expressão COUNT_BIG(*)
+	4 - As tabelas usadas na view devem ser especificadas com o duplo qualificador do nome: dbo.funcionarios	

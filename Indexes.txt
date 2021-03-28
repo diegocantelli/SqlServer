@@ -36,6 +36,15 @@ Neste tipo de índice o dado é armazenado em um lugar e o índice é armazenado
 em outro lugar, por este motivo, uma tabela pode ter mais de um índice não clusterizado.
 
 
+-- UNIQUE AND NON UNIQUE INDEXES
+
+Unique index são usados para garantir a unicidade do valor de uma chave no índice. Por padrão
+PRIMARY KEYS criam uma um índice non clustered index.
+
+Uniqueness é uma propriedade de um índice e tanto CLUSTERED Index como NON-CLUSTERED index
+podem ser criados como UNIQUE
+
+
 
 
 

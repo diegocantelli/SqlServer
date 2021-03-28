@@ -1,3 +1,9 @@
 Views
 
-Views podem ser consideradas tabelas virtuais
+	Views podem ser consideradas tabelas virtuais
+
+Criando uma View
+
+	Create View vwBuscaFuncionarios
+	as
+		select * from funcionario

@@ -5,3 +5,17 @@ Problemas da redundâcia de dados
 	1 - Desperdício do espaço de disco
 	2 - Inconsistência dos dados
 	3 - Queries podem ficar lentas
+
+
+Primeira forma normal
+
+Diz-se que uma tabela está na primeira forma normal, quando:
+	1 - Os dados em cada coluna são atômicos, ou seja, sem valores múltiplos
+	    separados por vírgulas.
+		1a - Problemas de uma coluna que possui valores não atômicos:
+			Não é possível atualizar apenas um dos valores
+	2 - A tabela não deve conter colunas repetidas, do tipo: Endereço1, Endereço2 e etc
+		2a - Problemas de colunas repetidas:
+			Há desperdício de espaço em disco para alocar as colunas que podem
+			nunca serem utilizadas
+	3 - Cada coluna deve conter um identificador único através da primary key

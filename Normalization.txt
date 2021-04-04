@@ -19,3 +19,23 @@ Diz-se que uma tabela está na primeira forma normal, quando:
 			Há desperdício de espaço em disco para alocar as colunas que podem
 			nunca serem utilizadas
 	3 - Cada coluna deve conter um identificador único através da primary key
+
+
+
+Segunda forma normal
+
+Diz-se que uma tabela está na segunda forma normal, quando:
+	1 - A tabela está na primeira forma normal
+	2 - Os dados redundantes são movidos para uma outra tabela
+	3 - Quando há relacionamento entre as tabelas usando foreign keys
+
+
+
+
+
+
+
+
+
+
+

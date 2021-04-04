@@ -1,0 +1,7 @@
+Normalização é o processo de organizar os dados no intuito de minimizar a redundância
+de dados, o que por sua vez garante consistência de dados.
+
+Problemas da redundâcia de dados
+	1 - Desperdício do espaço de disco
+	2 - Inconsistência dos dados
+	3 - Queries podem ficar lentas

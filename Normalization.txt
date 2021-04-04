@@ -31,8 +31,11 @@ Diz-se que uma tabela está na segunda forma normal, quando:
 
 
 
+Terceira forma normal
 
-
+Diz-se que uma tabela está na segunda forma normal, quando:
+	1 - A tabela está tanto na primeira forma normal quanto na segunda forma normal
+	2 - Não possui colunas que não dependem totalmente da chave primária
 
 
 

@@ -1,0 +1,20 @@
+Pivot é um operador do Sql Server que pode ser usado para tornar valores únicos
+de uma coluna em múltiplas colunas na saída, dando o efeito de rotacionar a tabela.
+Ex: Cada linha no resultado irá virar uma coluna única
+	 ------		------
+	|country|       Brasil|Eua|UK
+	|Brasil |
+	|Eua    |	
+	|UK     |
+
+Query
+
+Select TotalVendas, Brasil, Eua, UK
+FROM tblVendasProdutos
+PIVOT
+(
+	SUM(TotalVendas)
+	FOR(VendasPaís)
+	IN([Brasil], [Eua], [UK]
+)
+AS TabelaPivot

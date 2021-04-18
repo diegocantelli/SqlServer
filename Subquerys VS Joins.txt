@@ -1,0 +1,10 @@
+De acordo com o MSDN, na maioria dos casos não há diferença de performance entre querys que usam subquerys
+com querys que usam Joins.
+
+Existe diferença de performance quando na subquery é feito uso de alguma cláusula de checagem(exists, not exists),
+tornando a abordagem com subquery mais lenta. Nestes casos é preferível usar JOIN.
+
+Apesar dessa preferência de usar joins no lugar de subquerys, o SQLServer pode ser inteligente o suficiente
+para gerar o mesmo plano de execução para ambas as formas, ou seja, não resultando em diferenças na prática.
+
+Uma boa prática é sempre consultar o plano de execução das querys e comparar para ver qual está perfomando melhor.

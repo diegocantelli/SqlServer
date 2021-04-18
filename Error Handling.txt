@@ -1,0 +1,18 @@
+SINTAXE
+Erros capturados dentro do bloco catch não são retornados para a aplicação "chamante",
+para isso deve-se usar a função RAISERROR()
+
+	Begin Try
+		comandos sql
+	End Try
+	Begin Catch
+		Select
+			--Estas funções só trarão resultado dentro do contexto
+			-- de um bloco try/catch
+			Error_Number() as ErrorNumber,
+			Error_Message() as ErrorMessage,
+			Error_Procedure() as ErrorProcedure,
+			Error_State() as ErrorState,
+			Error_Severity() as ErrorSeverity,
+			Error_Line() as ErrorLine
+	End Catch

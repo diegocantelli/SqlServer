@@ -1,0 +1,17 @@
+Sintaxe
+
+-- Begin Transaction: Dá início à transação. Toda transação precisa ser finalizada com um commit ou com Rollback Transaction, 
+-- para não travar a base
+
+	Begin Transaction
+		Update table set column = 1 where column = 2
+
+-- Rollback Transaction: o valor que seria atualizado para 2, permanecerá com 1, cancelando o update
+	Begin Transaction
+		Update table set column = 1 where column = 2
+	Rollback Transaction
+
+-- Commit Transaction: O valor será de fato alterado na base
+	Begin Transaction
+		Update table set column = 1 where column = 2
+	Commit Transaction

@@ -1,0 +1,20 @@
+Source Table: Contém as mudanças que precisam ser aplicadas na tabela destino(target)
+Target table: A tabela que requer mudanças(inserts, Updates e Deletes)
+
+MERGE Empregado as Target
+USING Empregado as Source
+ON Target.Id = Source.Id
+
+--Quando o mesmo id estiver presente nas 2 tabelas, o registro na tabela target será atualizado
+When MATCHED THEN
+	(instrução UPDATE)
+
+--Quando algum dado da tabela source não estiver presente na tabela target, este registro será incluído
+-- na tabela target
+WHEN NOT MATCHED BY TARGET THEN
+	(instrução INSERT)
+
+--Quando algum dado presente na tabela target não estiver presente na tabela source, este registro será
+-- deletado da tabela target
+WHEN NOT MATCHED BY SOURCE THEN
+	DELETE;

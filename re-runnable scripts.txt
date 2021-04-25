@@ -9,3 +9,14 @@ begin
 		id int identity primary key
 	)
 End
+
+
+--Checando a existência de uma tabela através da função Object_ID
+--Caso seja nulo, o objeto não está criado na base
+if OBJECT_ID('tblEmpregados') is null
+begin
+	Create table tblEmpregados(
+		id int identity primary key
+	)
+
+end

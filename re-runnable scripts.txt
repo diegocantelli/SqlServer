@@ -1,0 +1,11 @@
+É um script que quando executado mais de uma vez, não irá lançar erros.
+
+Use [SampleBD]
+
+--Checando a existência de uma tabela através da tabela information_schema.tables
+if not exists (select * from information_schema.tables where table_name = 'tblEmpregados')
+begin
+	Create table tblEmpregados(
+		id int identity primary key
+	)
+End

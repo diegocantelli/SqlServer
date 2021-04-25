@@ -1,0 +1,25 @@
+Declare @ProductId int
+Declare @Name nvarchar(30)
+
+--Declara um cursor chamado ProductCursor para a query abaixo dele
+Declare ProductCursor CURSOR FOR
+Select Id, Name from tblProducts where Id <=1000
+
+--Executa o select associado a este cursor e armazena o resultado do select 
+Open ProductCursor
+
+--Dentro do cursor irá buscar o próximo valor da query armazenada e irá jogar os valores nas variáveis
+--previamente definidas
+Fetch Next From ProductCursor into @ProductId, @Name
+
+--Enquanto houver itens no dataset, o status será zero
+While(@@FETCH_STATUS = 0)
+begin
+	Fetch Next From ProductCursor into @ProductId, @Name
+end
+
+--Libera o resultset associado a este cursor
+CLOSE ProductCursor
+
+--Libera o cursor da memória
+DEALLOCATE ProductCursor

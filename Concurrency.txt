@@ -13,3 +13,10 @@ Dirty Read
 	A segunda transação lê esse valor que foi diminuido pela primeira transação. No momento em que a primeira trasição
 	for comitar essa operação, ocorre um erro, executando o rollback para o valor anterior. Nesse caso, a segunda
 	transição permanecerá com o valor diminuído em 1, que já não corresponde mais ao valor correto. 
+
+Lost Update
+	Ocorre quando 2 transações Lêem e atualizam o mesmo dado, onde no caso, a segunda transação irá atualizar
+	com valores inconsistentes.
+
+	Para resolver este problema, é necessário alterar o nível de isolamento da transação da seguinte forma:
+	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ

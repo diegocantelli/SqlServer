@@ -1,0 +1,15 @@
+Dirty Read
+	Dirty read ocorre quando uma transação lê dados que foram modificados por outra transação,
+	mas que ainda não foram comitados.
+
+	Para que dados uncomitados possam ser lidos, é necessário alterar o nível de isolamento da transação
+	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+
+	Podemos tbm usar o (NOLOCK) na instrução SELECT
+	Ex: select * from tblExemplo (NOLOCK) -> Irá possibilitar a leitura de dados não comitados
+
+	Problema
+	Imagine 2 transações concorrentes. A primeira transação diminui em 1 unidade um determinado poduto do estoque.
+	A segunda transação lê esse valor que foi diminuido pela primeira transação. No momento em que a primeira trasição
+	for comitar essa operação, ocorre um erro, executando o rollback para o valor anterior. Nesse caso, a segunda
+	transição permanecerá com o valor diminuído em 1, que já não corresponde mais ao valor correto. 

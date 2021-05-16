@@ -1,0 +1,40 @@
+Uma coluna calculada é utilizada quando realizamos um cálculo ou montamos uma expressão
+e associamos a uma coluna.
+
+O dados retornado por essa coluna é retornado no momento em que o mesmo for solicitado, por
+este motivo, ao realizar um insert, o valor referente à esta coluna calculada não deverá
+ser informado.
+
+Utilizando da forma abaixo irá ocupar espaço desnecessário no BD(numeric(20,10)
+Create Table Exemplo
+(
+	Id smallint primary key indentiy(1,1),
+	Titulo varchar(20),
+	Preco smallmoney,
+	comissao numeric(5,2)
+	ValorComissao as (Preco * Comissao / 100)
+)
+go
+
+O correto é fazer um cast para um tipo que se enquadre melhor na situação e que ocupe
+menos espaço no BD
+Create Table Exemplo
+(
+	Id smallint primary key indentiy(1,1),
+	Titulo varchar(20),
+	Preco smallmoney,
+	comissao numeric(5,2)
+	ValorComissao as cast((Preco * Comissao / 100) as smallmoney)
+)
+go
+
+Caso seja necessário persistir este dado no BD, é possível através da cláusula PERSISTED
+Create Table Exemplo
+(
+	Id smallint primary key indentiy(1,1),
+	Titulo varchar(20),
+	Preco smallmoney,
+	comissao numeric(5,2)
+	ValorComissao as cast((Preco * Comissao / 100) as smallmoney) PERSISTED
+)
+go

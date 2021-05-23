@@ -1,0 +1,18 @@
+Chave primária e o índice clusterizado.
+
+	Chave primária é uma coluna ou várias de uma tabela que garante a inicidade da linha.
+	Por boas práticas, 99% das tabelas devem possuir uma chave primária.
+
+	Como ela tem o papel de garantir a unicidade do dado, ela pode ser uma coluna do tipo inteiro, que também
+	será utilizada para referências em outras tabelas.
+
+	Quando criamos em uma tabela uma constraint do tipo Primary Key, o SQL Server já cria um índice clusterizado único
+	para manter essa restrição.
+
+	Boas práticas
+		- Criar a chave primária com índice Clusterizado.
+		- Selecionar a coluna que será a chave primária como sendo artificail, que não faz parte da regra de negócio
+		da tabela e que não sofra modificação devido a mudanças das regras de negócio.
+		- A coluna deve ser numérica e do tipo inteiro, mas não é obrigatório.
+		- Atribua uma numeração automática, usando IDENTITY ou SEQUENCE.
+		- Evite ao máximo colocar duas colunas como chave primária

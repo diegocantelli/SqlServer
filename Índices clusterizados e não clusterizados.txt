@@ -1,0 +1,22 @@
+Clusterizados e não clusterizados
+
+Esses tipos de índices têm basicamente a mesma estrutura de armazenamento.
+	- Você define as colunas que serão as chaves.
+	- Ele cria uma estrutura b-tree e distribui as chaves desde a página raiz até as páginas folhas.
+
+A diferença:
+	Clusterizado
+		- Em um índice clusterizado, os dados da tabela são movidos para as páginas folhas e organizados de acordo
+		com a chave do índice. Podemos dizer que quando você pesquisa em um índice cluster, você está 
+		pesquisando na própria tabela. Quando criamos um índice clusterizado, a tabela deixa de ser uma HEAP TABLE 
+		e passa a ser uma CLUSTERED TABLE.
+
+		- Somente um índice clusterizado pode ser criado na tabela.
+		- Exemplo: Create Clustered Index idcID on tAluno(id)
+		após esse comando a tabela passará a ser organizada com base no índice id da tAluno
+
+	Não clusterizado
+		- Todas as páginas do índice tem somente as chaves do índice.
+		Quando uma query utiliza um índice não clusterizado, o Sql Server efetua a pesquisa pelo índice
+		até encontrar as chaves da pesquisa nas páginas folhas.
+		- Exemplo: Create NonClustered Index idcID on tAluno(id)

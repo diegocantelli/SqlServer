@@ -14,5 +14,4 @@ Chave primária e o índice clusterizado.
 		- Selecionar a coluna que será a chave primária como sendo artificail, que não faz parte da regra de negócio
 		da tabela e que não sofra modificação devido a mudanças das regras de negócio.
 		- A coluna deve ser numérica e do tipo inteiro, mas não é obrigatório.
-		- Atribua uma numeração automática, usando IDENTITY ou SEQUENCE.
-		- Evite ao máximo colocar duas colunas como chave primária
+		- Atribua uma numeração automática, usando IDENTi

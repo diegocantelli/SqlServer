@@ -1,0 +1,15 @@
+Índice composto
+
+	- Quando temos uma query que utiliza duas expressões para o filtro das linhas e em
+	cada expressão temos uma coluna utilizada para realizar uma parte da filtragem.
+	Temos no total 2 colunas que são utilizadas para realizar o filtro das linhas.
+
+	- Podemo criar um índice que cobre as duas colunas e com isso acelera a pesquisa da query.
+
+	Create Index idxCategoia on tProduto(coluna1, coluna2) with (drop_existing = on)
+
+	- Caso uma query possua muitos campos na cláusula  where, deve-se optar por criar
+	os índices apenas para as colunas com baixa seletividade(colunas cujo os valores se repetem menos)
+
+	Para descobrir colunas com baixa ou alta seletividade, basta executar um group by pelo
+	campo desejado

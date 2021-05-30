@@ -13,3 +13,4 @@ Colunas incluídas e indice de cobertura
 	Create NonClustered Index IX_indice
 	on tabela(coluna1, coluna2)
 	Include(coluna3, coluna4)
+	with(drop_existing = on)

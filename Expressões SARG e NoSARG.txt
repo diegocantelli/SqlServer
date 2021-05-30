@@ -1,0 +1,14 @@
+SARG é a redeção de Search Argument
+
+	- SARG é um conceito que, aplicado nas nossas querys, restringe uma busca porque
+	especifica uma correspondência exata, um intervalo de valores ou um conjunto de duas 
+	ou mais expressões unidas pelo operador 'AND'
+
+	- Uma expressão SARG pode ser utilizada na cláusula WHERE ou HAVING para filtro de linhas
+	ou em clásula ON de um JOIN, ela é composta por :
+		- Coluna: Nome da coluna que será pesquisada
+		Não deve existir mais nada além do nome da coluna.
+		- Operador: Somente os operadores de comparação considerados inclusivos:
+			- (=, >, <, >=, <=, Between e Like(caso específico) 
+		- Valor: Expressão constante, do mesmo tipo da coluna. Pode ser uma variável
+	- Fora dessa regra acima a pesquisa será considerada NoSARG.

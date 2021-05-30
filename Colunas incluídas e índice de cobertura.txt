@@ -1,0 +1,15 @@
+Colunas incluídas e indice de cobertura
+
+	- Colunas incluídas em um índice é um recurso que permite incluir colunas na definição
+	do índice e que não farão parte da chave.
+
+	- Essas colunas serão incluídas no índice, mas ficarão apenas nas páginas folhas. Por este
+	motivo, somente índices não clusterizados podem utilizar esse recurso.
+
+	- Colunas incluídas no índice não são utilizadas como chave de pesquisa. Esse recurso
+	existe para evitar o Key Lookup ou RID Lookup.
+
+	Sintaxe: 
+	Create NonClustered Index IX_indice
+	on tabela(coluna1, coluna2)
+	Include(coluna3, coluna4)

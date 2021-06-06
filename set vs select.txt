@@ -1,0 +1,29 @@
+Atribuição de valor na variável: Utilizar Set ou Select
+
+	- SET @variavel é utilizada para atribuir um valor para uma variável
+		- Somente uma variável
+		- Padrão ANSI
+		- Recomendação de uso pela Microsoft
+		
+		- Exemplo
+			declare @cValor1 char(10)
+			declare @cValor2 char(10)
+			- Incorreto
+				set @cValor1 = "teste1", @cValor = "teste2" -> não funciona
+			- Correto
+				set @cValor1 = "teste1"
+				set @cValor2 = "teste2"	
+
+	- SELECT @variavel também é utilizada para atribuir uma valor à uma variável
+	- Utiliza várias variáveis separadas por vírgula
+
+	- Desempenho
+		Em geral utilizar a instrução SELECT é mais rápido que SET
+
+	- Cuidados
+		- SET: Ao atribuir um valor utilizando SET, caso o resultado venha
+		de uma query que retorne mais de uma linha, irá ocasionar erro.
+
+		- SELECT: Ao atribuir um valor utilizando SELECT, caso o resultado
+		venha de uma query que retorne mais de uma linha, o valor armazenado
+		na variável será o da última linha do SELECT

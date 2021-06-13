@@ -8,4 +8,13 @@ Except Operator
 		EXCPET
 		Select Id, Nome from Clientes
 
+Not in Operator vs Except Operator
+
+	Funciona da mesma forma que o operador Except, mas não possui as restrições de uso
+	que possui o Except.
+	
+	Exemplo:
+		Select Id, Nome from Clientes
+		where Id NOT IN (Select Id from Clientes where Nome = 'teste')
+
 	

@@ -1,0 +1,11 @@
+Except Operator
+
+	Retorna os resultados da tabela à esquerda que não estão na tabela da direita.
+	- A quantidade de colunas, a ordem e o tipo devem ser os mesmos em ambas as querys
+	
+	Sintaxe:
+		Select Id, Nome from Clientes
+		EXCPET
+		Select Id, Nome from Clientes
+
+	

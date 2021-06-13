@@ -1,0 +1,16 @@
+Cross Apply
+
+	É usado para juntar uma tabela com a table-value retornada por uma função.
+	Terá o mesmo resultado de um inner join, ou seja, retornará os resultados que são
+	iguais entre as 2 tabelas
+
+Outer Apply
+	
+	Funciona da mesma forma que Cross Apply, mas o seu resultado é igual ao do left join
+
+Exemplo
+	- func_BuscaEmpregadosPorDepartamento -> é uma função que retorna uma tabela, por este
+	motivo não é possível usar INNER JOIN
+
+	SELECT * from Empregados E
+	Cross Apply func_BuscaEmpregadosPorDepartamento(E.DepartamentoId)

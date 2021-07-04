@@ -1,0 +1,14 @@
+SELECT INTO -> NÂO pode ser usado para inserir dados em uma tabela já existente.
+
+-- Insere o ID e NAME da tabela Employees na tabela EmployeesBackup
+SELECT ID, NAME, Department
+	-- EmployeesBackup -> será a tabela criada após o comando
+	INTO EmployeesBackup
+FROM Employees
+
+-- Cria uma nova tabela onde as colunas e os tipos batem com aqueles da tabela existente, mas sem inserir dados.
+
+SELECT * 
+	INTO EmployeesBackup
+FROM Employees
+WHERE 1 <> 1

@@ -1,0 +1,11 @@
+Diferença entre Having e Where:
+
+	- Having: Pode ser usada para filtrar colunas agregadas. Sum(valor) e etc...
+		  - Filtra as linhas depois que as agregações ocorrerem.
+		  - É mais lenta que WHERE e deve ser evitada sempre que possível
+		  - Vem depois do Group By
+	- Where: Não pode ser usada para filtrar colunas agregadas
+		  - Filtra as linhas antes das agregações ocorrerem
+		  - Vem antes do Group By	
+
+As duas cláusulas podem ser usadas em conjunto.

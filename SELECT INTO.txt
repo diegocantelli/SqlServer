@@ -12,3 +12,16 @@ SELECT *
 	INTO EmployeesBackup
 FROM Employees
 WHERE 1 <> 1
+
+**************************************************
+
+INSERT INTO -> Use este comando para inserir os dados de uma tabela já existente para outra também
+já existente
+
+	INSERT INTO EmployeesBackup
+	SELECT * FROM Employees
+
+Especificando os campos a serem inseridos
+
+	INSERT INTO EmployeesBackup(Id, Name, Gender)
+	SELECT Id, Name, Gender FROM Employees

@@ -1,0 +1,45 @@
+Serve para realizar operações agregadas em múltiplos levels em uma hierarquia.
+
+Exemplo: Em uma tabela com faturamento por países, deseja-se obter o total por país e na última linha o somatório
+do faturamento de todos os países
+
+Id|Pais  |Valor
+1 |Brasil|1000
+2 |Brasil|2000
+3 |USA   |4000
+3 |USA   |3000
+
+Sintaxe:
+	SELECT Pais, Sum(Valor)
+	From Country
+	GROUP BY ROLLUP(Pais)
+
+Resultado:
+	Id|Pais  |Valor
+        1 |Brasil|3000
+        2 |USA   |7000
+        3 |NULL  |10000
+
+
+
+É possível também obter o subtotal por país
+        Id|Pais  |Cidade|Valor
+        1 |Brasil|SP    |1000
+        2 |Brasil|RJ    |2000
+        3 |USA   |NY    |4000
+        3 |USA   |NY    |3000
+
+Sintaxe:
+	SELECT Pais, Cidade, Sum(Valor)
+	From Country
+	GROUP BY ROLLUP(Pais, Cidade)
+
+Resultado	
+        Id|Pais  |Cidade|Valor
+        1 |Brasil|SP    |1000
+        2 |Brasil|RJ    |2000
+        3 |Brasil|NULL  |3000
+        4 |USA   |NY    |4000
+        5 |USA   |NY    |3000
+        6 |USA   |NULL  |7000
+        7 |NULL  |NULL  |3000

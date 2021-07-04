@@ -1,0 +1,23 @@
+Cube -> Produz o resultado da combinação das colunas especificadas na cláusula GROUP BY CUBE()
+
+Exemplo: Uma query que traz o somatório do salário entre todas as combinações possíveis com base 
+         no agrupamento País e Gênero. Com base na tabela abaixo, deverá ser escrita uma query que retorne
+         a soma dos salários agrupados por País e Genero, bem como os subtotais por pais, genero, 
+	 por país e gênero, bem como o somatorio geral
+
+Exemplo
+	País   |Genero   |Salario
+        Brasil |Feminino |1000
+        Brasil |Feminino |1000
+        USA    |Masculino|2000
+        USA    |Feminino |4000
+        Brasil |Feminino |4000
+        USA    |Masculino|2000
+
+Sintaxe
+	SELECT Pais, Genero, Sum(Salario)
+	FROM Empregados
+	GROUP BY Cube(Pais, Genero)
+
+É possível obter os mesmos resultados utilizando grouping sets
+	

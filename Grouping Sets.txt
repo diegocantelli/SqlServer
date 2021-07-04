@@ -1,0 +1,15 @@
+Para cada agrupamento dentro da cláusula grouping sets, serão exibidas as linhas referentes à este group
+
+O resultado será semelhante a 4 querys com UNION ALL, a primeira fazendo group by por country e gender e assim por diante
+
+SELECT Country, Gender, Sum(Salary) TotalSalary
+FROM Employees
+Group By
+	GROUPING SETS
+	(
+		(country, Gender), -- irá realizar a soma do salário agrupado por país e gênero
+		(country),
+		(Gender),
+		() -- irá realizar a soma de todas as linhas, sem group by
+	)
+Order By GROUPING(Country), GROUPING(Gender), Gender

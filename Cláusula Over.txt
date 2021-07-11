@@ -1,0 +1,18 @@
+A cláusula OVER é usada em combinação com a cláusula PARTITION BY, que é usada para dividir os dados.
+
+Exemplo:
+	COUNT(Gender) OVER (PARTITION BY Gender)
+
+Irá particionar os dados com base no gênero, no caso masculino e feminino, e então irá contar a quantidade de registros
+encontrados para cada grupo que foi particionado anteriormente.
+
+É comumente utilizada quando se deseja obter as colunas que não foram agregadas na cláusula group by, o que não é
+possível no SQL SERVER
+
+Select name, salary, Gender,
+	count(Gender) Over (Partition By Gender) as gendersTotal,
+	Avg(salary) Over (Partition By Gender) as AvgSal
+From Employees
+
+Com a query acima não seria possível usar o group by para obter as funções agregadas por gênero apenas, pois 
+no select contém campos que não poderiam fazer parte do group by

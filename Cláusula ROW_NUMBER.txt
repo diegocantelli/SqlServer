@@ -1,0 +1,27 @@
+Row_Number
+	- Foi introduzida no sql server 2005
+	- Retorna o número sequencia de uma linha começando por 1
+	- É necessário utilizar Order By
+	- Pode ser utilizada com Partition By
+	- Quando o dado é particionado, o número da linha é reiniciado com 1 quando a partição muda.
+
+Exemplo
+	Sem utilizar partition
+		Select Name, Gender, Salary,
+	       		Row_Number() over (order by Gender) as RowNumber
+		from Employees
+	
+	Com partition
+	Select Name, Gender, Salary,
+	       		Row_Number() over (partition by Gender order by Gender) as RowNumber
+		from Employees
+
+Muito Utilizada para deletar linhas duplicadas em uma tabela
+
+Exemplo
+	With EmployeesCte As
+	(
+		Select *, row_number() over(partition by ID order by ID) as RowNumber
+		From Employees
+	)
+	delete from EmployeesCte where RowNumber > 1

@@ -1,0 +1,13 @@
+RANK -> Não considera a posição em caso de empate, exibindo no rank a posição em que os elementos estão
+	empatados
+	Exemplo: 1,1,3,4,5
+DENSE_RANK -> Considera a ordem das posições em caso de empate.
+	Exemplo: 1,1,2,3,4
+
+
+Sintaxe
+
+	Select Name, Gender, Salary,
+	       Rank() over (ORDER BY Salary DESC) as Rank;
+	       DENSE_RANK() over (ORDER BY Salary DESK) as DenseRank
+	FROM Employees		

@@ -1,0 +1,19 @@
+Calculando o somatório total linha por linha independente do gênero
+
+SELECT Name, Gender, Salary,
+	SUM(Salary) Over(Order By Id) as Somatorio
+FROM Employees
+
+Resultado
+	Name | Gender | Salary | Somatorio
+	Emp1 | Female | 1000   | 1000
+	Emp2 | Female | 500    | 1500
+	Emp3 | Male   | 1000   | 3500
+
+Calculando o somatório total linha por linha, mas realizando a soma agrupada por gênero
+SELECT Name, Gender, Salary,
+	SUM(Salary) Over(Partition By Gender Order By Id) as Somatorio
+FROM Employees
+
+É IMPORTANTE USAR NA CLÁSULA OVER(ORDER BY) UMA COLUNA QUE SEJA UM IDENTIFICADOR ÚNICO,
+PARA NÃO SE TER PROBLEMAS NO SOMATÓRIO

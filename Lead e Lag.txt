@@ -1,0 +1,22 @@
+Lead
+	Usada para acessar os dados da linha subsequente ao da linha atual
+
+Lag
+	Usada para acessar os dados da linha anterior ao da linha atual
+
+Obrigatório o uso de Order By
+Partition By é opcional
+
+Sintaxe Lead
+	Lead(coluna, (offset)quantaslinhas, (valor a ser exibido caso não exista linhas subsequentes)default_value)
+	- A coluna lead irá retornar o valor do salário referente à próxima linha
+	Select Name, Gender, Salary
+		Lead(Salary) OVER (Order by Salary) AS Lead
+	From Employees
+
+Sintaxe Lag
+	Lag(coluna, (offset)quantaslinhas, (valor a ser exibido caso não exista linhas anteriores)default_value)
+	- A coluna lag irá retornar o valor do salário referente à linha anterior
+	Select Name, Gender, Salary
+		Lead(Salary) OVER (Order by Salary) AS Lag
+	From Employees

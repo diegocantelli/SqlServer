@@ -1,0 +1,4 @@
+Usado para tentar converter um determinado valor em outro tipo.
+
+select try_parse('99' as int) -> 99
+select try_parse('abc' as int) -> null

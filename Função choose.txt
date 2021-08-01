@@ -1,0 +1,16 @@
+A função choose pode ser utilizada para substituir o case em alguns casos,
+como no exemplo abaixo:
+
+Utilizando choose
+	select name, dateOfBirth
+		choose(datepart(MM,DateOfBirth), 'JAN', 'FEB')
+	from employees
+
+Utilizando Case
+
+	select name, dateOfBirth
+		case datepart(mm, dateOfBirth)
+			when 1 then 'JAN'
+			when 2 then 'FEB'
+		end as month
+	from employees

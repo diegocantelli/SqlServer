@@ -1,0 +1,3 @@
+Retorna o último dia do mês de uma determinada data
+
+	Select EOMONTH('01/08/2021') as ultimoDia -> 31/08/2021
